@@ -1,7 +1,9 @@
 class Solver(regionLen: Int) {
   val boardLen = regionLen * regionLen
 
-  def solve(board: IndexedSeq[Int]): Option[IndexedSeq[Int]] = if (board.size == boardLen * boardLen) solve(board, 0) else None
+  def solve(board: IndexedSeq[Int]): Option[IndexedSeq[Int]] = {
+    if (board.size == boardLen * boardLen) solve(board, 0) else None
+  }
 
   private def solve(board: IndexedSeq[Int], i: Int): Option[IndexedSeq[Int]] = {
     def candidates(i: Int) = {
